@@ -230,7 +230,7 @@ body {
     margin-top: 3vh;
 }
 
-#search-, #search-ingredients-button {
+#search-button, #search-ingredients-button, #donate-button {
     outline: none;
     font-size: 1em;
     font-family: inherit;
@@ -244,7 +244,7 @@ body {
     width: 10vw;    
 }
 
-#search-landing:hover, #search-button:hover, #search-ingredients-button {
+#search-landing:hover, #search-button:hover, #search-ingredients-button, #donate-button:hover {
     cursor: pointer;
 }
 
@@ -478,4 +478,74 @@ body {
     .email-submit-button {
         margin-bottom: 2vh;
     }
+
+    #search-button, #search-ingredients-button, #donate-button {
+        height: 5vh;
+        width: 14vw;
+        padding: 0;
+        border-radius: 5px; 
+    }
+
+    .sellcard h2, p {
+        margin: 0 auto 0 auto;
+    }
+
+    .itemgrid {
+        width: 100%;
+    }
+}
+
+/* TESTING DONATE */
+
+.dorbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dorbar-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: left;
+    align-items: left;
+}
+
+.itemgrid {
+    width: 80vw;
+    height: 70vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.foodimage {
+    height: 10vw;
+    width: 10vw;
+}
+
+.sellcard {
+    user-select: none;
+    margin: 0.6vw;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #FFF;
+    transition: 0.1s;
+    border-radius: 5%;
+}
+
+.sellcard:hover {
+    border-color: #333;
+    cursor: pointer;
+}
+
+.sellcard h2 {
+    font-size: 1.1em;
+}
+
+.sellcard p {
+    font-size: 0.9em;
 }
