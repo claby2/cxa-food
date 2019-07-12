@@ -47,21 +47,33 @@
     </div>
 
     <div class = "recipe-landing" id = "blank-background">
-        <h1>Login</h1>
-        <p>Login here! If you do not already have an account, sign up <a href = "./signup.html" style = "text-decoration: none; color: #AAF;">here</a></p>
+        <h1>Profile Search</h1>
+        <p>Search for FoodTrack users to see their statistics</p>
     </div>
-    <section class = "importance-section">
-        <div class = "login-card">
-            <h2>Login here</h2>
-            <p>Username:</p>
-            <input id = "input-username" >
-            <p>Password:</p>
-            <input id = "input-password" type = "password" >
-            <button id = "login-button" class = "regular-button">Submit</button>
-        </div>
-    </section>
 
-<script src = "./login.js"></script>
+    <section class = "importance-section">
+            <div class = "content">
+                <div class = "importance-text">
+                    <h2>Enter a valid FoodTrack username</h2>
+                </div>
+    
+                <div class = "input-box">
+                    <textarea id = "input-username" ></textarea>
+                    <div style = "display: flex;">
+                        <button id = "search-username" class = "regular-button" style = "margin-right: 1vw;">Search</button>
+                        <button id = "leaderboard-button" class = "regular-button" style = "margin-left: 1vw;">Leaderboard</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class = "importance-section">
+            <div class = "profile-results" id = "profile-display">
+    
+            </div>
+        </section>
+
+<script src = "./profilesearch.js"></script>
     
 </body>
 </html>

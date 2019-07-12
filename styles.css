@@ -597,3 +597,23 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.profile-results {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    color: #000;
+    width: 40vw;
+    margin-bottom: 1vw;
+    background-color: #DADADA;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
