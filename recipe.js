@@ -19,13 +19,13 @@ let getRecipeAPI = async (x) => {
     foodDisplay.innerText = "";
     let obj = { ingredients: x }
     console.log(obj.ingredients)
-    let response = await fetch(`https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=183e4676875e93af370226ab5811d3a5&q=${obj.ingredients}`)
+    let response = await fetch(`https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=${obj.ingredients}`)
   
     let data = await response.json()
   
   
   
-    let allTitles = data.recipes.map((elem) => {
+    let allTitles = data.results.map((elem) => {
         let dishlink = document.createElement("a");
         let dishcard = document.createElement("div");
         let dishname = document.createElement("h2");
@@ -33,9 +33,9 @@ let getRecipeAPI = async (x) => {
         dishcard.classList.add("dishcard")
         dishname.innerText = elem.title;
         dishname.innerText = dishname.innerText.replace(/(\r\n|\n|\r)/gm,"");
-        dishlink.href = elem.source_url;
+        dishlink.href = elem.href;
         dishlink.target = "_blank";
-        dishingredients.innerText = "";
+        dishingredients.innerText = elem.ingredients;
         // dishname.append(dishnamelink.href);
         dishcard.append(dishname);
         dishcard.append(dishingredients);

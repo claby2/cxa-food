@@ -230,7 +230,7 @@ body {
     margin-top: 3vh;
 }
 
-#search-button, #search-ingredients-button, #donate-button {
+#search-button, #search-ingredients-button, #donate-button, .regular-button {
     outline: none;
     font-size: 1em;
     font-family: inherit;
@@ -244,7 +244,7 @@ body {
     width: 10vw;    
 }
 
-#search-landing:hover, #search-button:hover, #search-ingredients-button, #donate-button:hover {
+#search-landing:hover, #search-button:hover, #search-ingredients-button, #donate-button:hover, .regular-button:hover {
     cursor: pointer;
 }
 
@@ -548,4 +548,30 @@ body {
 
 .sellcard p {
     font-size: 0.9em;
+}
+
+#uploader {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foodimg {
+    display: block;
+}
+
+.hide {
+    display: none;
 }

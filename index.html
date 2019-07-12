@@ -6,33 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CXAFood</title>
     <link rel = "stylesheet" href ="./styles.css">
-
-
-
-
-
 </head>
 <body>
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-storage.js"></script>
-     <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#config-web-app -->
-      <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-database.js"></script>
-     <script>
-     // Your web app's Firebase configuration
-     var firebaseConfig = {
-         apiKey: "AIzaSyA0GNzCuQdgf7SUXcbHsu9sAHTMmKF21as",
-         authDomain: "cxa-food-67855.firebaseapp.com",
-         databaseURL: "https://cxa-food-67855.firebaseio.com",
-         projectId: "cxa-food-67855",
-         storageBucket: "gs://cxa-food-67855.appspot.com/",
-         messagingSenderId: "666506518305",
-         appId: "1:666506518305:web:47e34985c3677fbb"
-     };
-   // Initialize Firebase
-   firebase.initializeApp(firebaseConfig);
- </script>
 
     <div class = "navbar">
         <div class = "navbar-elements">
@@ -40,7 +15,7 @@
 
             <div class = "menu">
                 <a href = "./search.html" target = "_blank">Search for Tips</a>
-                <a href = "#">Recipe Search</a>
+                <a href = "./recipe.html">Recipe Search</a>
             </div>
         </div>
         <div id = "hamburger"><div class = "hamburger-line margin-bottom-6px"></div><div class = "hamburger-line margin-bottom-6px"></div><div class = "hamburger-line"></div></div>
@@ -54,7 +29,7 @@
     <div class = "landing" id = "background">
         <h1>FoodTrack</h1>
         <p>Don't let it go to waste</p>
-        <button id = "search-landing" href = "#main-about">Find Out More</button>
+        <button id = "search-landing" onclick="location.href = './donate.html';">Start Donating</button>
     </div>
 
     <section class = "importance-section">
@@ -80,10 +55,15 @@
                 </div>
             </div>
         </section>
-<script src = "./firebase.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 <script src = "./script.js"></script>
-
-
     
 </body>
 </html>

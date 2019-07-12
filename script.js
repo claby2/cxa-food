@@ -49,7 +49,7 @@ function displayFood(id){
         getMethods(id).then(e=>{
             for(let i = 0; i < Object.keys(e).length; i++){
                 let method = document.createElement("p");
-                method.innerText = e[i].location + " : " + e[i].expiration
+                method.innerText = e[i].location + " - " + e[i].expiration
                 methodinformation.appendChild(method)
             }
         })  

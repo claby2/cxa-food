@@ -26,6 +26,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+
     <div class = "navbar">
             <div class = "navbar-elements">
                 <a class = "logo" href = "./index.html"><span style = "color:#087F23;">CXA-FoodTrack</span></a>
@@ -44,24 +45,34 @@
     </div>
 
     <div class = "recipe-landing" id = "recipe-background">
-        <h1>Donate and Receive</h1>
+        <h1>Upload your food</h1>
         <p>Food that is ready to eat.</p>
     </div>
 
-    <div class = "dorbar">
-        <div class = "dorbar-buttons">
-            <div class = "donate-button">
-                <button id = "donate-button" onclick="location.href = './upload.html';">Donate</button>
-            </div>
+    <section class = "importance-section">
+        <div class = "upload-box">
+            <progress value = "0" max="100" id="uploader">0%</progress>
+            <input type="file" value="upload" id="fileButton"/>
+            <img id = "myimg" src="" alt="food pic" class = "foodimg hide">
+            <br>
+            <h2>Input Food Name</h2>
+            <textarea id = "input-name" value = "Enter Food Name"></textarea>
+            <h2>Input Food Expiry</h2>
+            <textarea id = "input-expiry" value = "Enter Food Expiry"></textarea>
+            <h2>Input Food Info</h2>
+            <textarea id = "input-info" value = "Enter Food Info"></textarea>
+            <h2>Input Food Seller</h2>
+            <textarea id = "input-seller" value = "Enter You Name"></textarea>
+            <br>
+            <button id = "upload-button" class = "regular-button" onclick="location.href = './donate.html';">Upload</button>
         </div>
-    </div>
-    <div class = "content">
-        <div class = "itemgrid" id = "itemgrid">
-            
-        </div>
-    </div>
+    </section>
+
+
+    
+    
    
-<script src = "./donate.js"></script>
+<script src = "./upload.js"></script>
 
     
 </body>
