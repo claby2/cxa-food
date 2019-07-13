@@ -103,9 +103,9 @@ leaderboardButton.addEventListener("click", ()=>{
 })
 
 function getRank(points){
-    if(points < 5){
+    if(points === 0){
         return "Rookie"
-    }else if (points < 10) {
+    }else if (points < 3) {
         return "Avid Donator"
     }else {
         return "Master Donator"
