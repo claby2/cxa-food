@@ -118,6 +118,16 @@ p.then(keys => {
     }
 })
 
+let sellcard = document.getElementsByClassName("sellcard");
+
+let myFunction = function() {
+    window.location.href = "./preview.html";
+};
+
+for (var i = 0; i < sellcard.length; i++) {
+    sellcard[i].addEventListener('click', myFunction, false);
+}
+
 // storageRef.child('image/' + i + '.jpeg').getDownloadURL().then(function(url) {
 //     // `url` is the download URL for 'images/stars.jpg'
 //     img = url
