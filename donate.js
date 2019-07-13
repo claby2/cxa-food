@@ -42,6 +42,7 @@ function createCard(i, name, expiry, info, seller){
     foodseller.innerText = seller;
 
     foodcard.classList.add("sellcard")
+    foodcard.onclick = goPreview()
 
     foodimg.classList.add("foodimage")
 
@@ -118,15 +119,9 @@ p.then(keys => {
     }
 })
 
-let sellcard = document.getElementsByClassName("sellcard");
-
-let myFunction = function() {
+let goPreview = function() {
     window.location.href = "./preview.html";
 };
-
-for (var i = 0; i < sellcard.length; i++) {
-    sellcard[i].addEventListener('click', myFunction, false);
-}
 
 // storageRef.child('image/' + i + '.jpeg').getDownloadURL().then(function(url) {
 //     // `url` is the download URL for 'images/stars.jpg'
