@@ -26,11 +26,14 @@ var storageRef = storage.ref();
 function createCard(i, name, expiry, info, seller){
     let foodcard = document.createElement('div');
     let foodimg = document.createElement('img');
+    let a = document.createElement('a');
     let foodname = document.createElement('h2');
     let foodexpiry = document.createElement('p');
     let foodinfo = document.createElement('p');
     let foodseller = document.createElement('h4');
 
+    a.href = "./preview.html"
+    a.appendChild(foodimg)
     storageRef.child((i+1).toString(10)).getDownloadURL().then(function(url) {
         foodimg.src = url;
         console.log(url)
@@ -45,7 +48,7 @@ function createCard(i, name, expiry, info, seller){
 
     foodimg.classList.add("foodimage")
 
-    foodcard.appendChild(foodimg)
+    foodcard.appendChild(a)
     foodcard.appendChild(foodname)
     foodcard.appendChild(foodexpiry)
     foodcard.appendChild(foodinfo)
@@ -118,11 +121,11 @@ p.then(keys => {
     }
 })
 
-let sellcard = document.getElementsByClassName("sellcard");
+// let sellcard = document.getElementsByClassName("sellcard");
 
-for (let i = 0; i < sellcard.length; i++) {
-    sellcard[i].onclick = "location.href = './preview.html';";
-}
+// for (let i = 0; i < sellcard.length; i++) {
+//     sellcard[i].onclick = "location.href = './preview.html';";
+// }
 
 // let goPreview = function() {
 //     window.location.href = "./preview.html";
