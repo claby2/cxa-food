@@ -44,6 +44,6 @@ loginButton.addEventListener("click", ()=>{
 
     p.then(len => {
         writeUserData(user, pass, len)
-
+        alert("Account Created Successfully")
     })
 })
